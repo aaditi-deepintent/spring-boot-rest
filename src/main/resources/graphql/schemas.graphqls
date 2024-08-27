@@ -1,0 +1,28 @@
+enum Status {
+    IDEA
+    IN_PROGRESS
+    COMPLETED
+    PUBLISHED
+}
+
+enum Type {
+    ARTICLE
+    VIDEO
+    COURSE
+    CONFERENCE_TALK
+}
+
+type Content {
+    id: Int
+    title: String
+    description: String
+    status: Status
+    contentType: Type
+    dateCreated: String
+    dateUpdated: String
+    url: String
+}
+
+type Query {
+    findAll: [Content]
+}
