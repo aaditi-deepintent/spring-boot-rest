@@ -10,7 +10,8 @@ public record Content(
         Integer id,
         String title,
         @Column(value = "description")
-        String desc,
+        //String desc,
+        String description,
         Status status,
         Type contentType,
         LocalDateTime dateCreated,

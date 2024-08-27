@@ -23,6 +23,21 @@ type Content {
     url: String
 }
 
+input ContentInput {
+    title: String
+    description: String
+    status: Status
+    contentType: Type
+    dateCreated: String
+    dateUpdated: String
+    url: String
+}
+
 type Query {
     findAll: [Content]
+    findById(id: Int): Content
+}
+
+type Mutation{
+    create(content:ContentInput): Content
 }
